@@ -1,0 +1,215 @@
+/* Corpo e fontes */
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+    line-height: 1.6;
+    text-align: center; /* centraliza todo o texto por padrão */
+}
+
+/* Header */
+header {
+    background-color: #ff7043;
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #ffe0b2;
+    transform: scale(1.05);
+}
+
+/* Capa */
+.cover-image img {
+    width: 100%;
+    max-height: 400px; /* altura ajustada */
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom: 40px;
+    transition: transform 0.5s ease;
+}
+
+.cover-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Equipe */
+.team {
+    padding: 50px 20px;
+    background-color: #fff0e6;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.team h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.team-members .member {
+    max-width: 150px;
+    transition: transform 0.3s;
+}
+
+.team-members .member:hover {
+    transform: translateY(-7px);
+}
+
+.team-members img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #ff7043;
+}
+
+.team-members p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Receitas em destaque */
+.recipes-preview {
+    padding: 20px;
+}
+
+.recipes-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.recipe-preview {
+    display: flex;
+    flex-direction: column; /* texto centralizado verticalmente */
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.recipe-preview img {
+    border-radius: 8px;
+    width: 40px;   
+    height: 40px;  
+    object-fit: cover;
+}
+
+.recipe-preview h3 {
+    margin: 0 0 5px 0;
+    color: #ff7043;
+    font-size: 1.2rem;
+}
+
+.recipe-preview p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #333;
+    color: white;
+    font-size: 0.95rem;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.search-box input {
+    padding: 14px 18px;
+    width: 80%;
+    max-width: 420px;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #ff7043;
+    box-shadow: 0 0 8px rgba(255,112,67,0.3);
+    outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #ff7043;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .recipe-preview img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+}
